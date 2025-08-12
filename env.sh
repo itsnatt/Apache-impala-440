@@ -1,6 +1,9 @@
 #!/bin/bash
 # Impala environment configuration
+# Lokasi instalasi Impala
 export IMPALA_HOME=/opt/impala
+export IMPALA_BIN_DIR=$IMPALA_HOME/bin
+export JAVA_BIN=$JAVA_HOME/bin/java
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0
 export PATH=$JAVA_HOME/bin:$PATH
 
