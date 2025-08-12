@@ -73,6 +73,20 @@ export HIVE_CONF_DIR=/etc/hive/conf
 export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/amd64/server:$LD_LIBRARY_PATH
 ```
 
+
+
+## **5. Testing ***
+Impala shell
+ ```
+bash /opt/impala/shell/impala-shell --protocol=beeswax -i localhost:21000
+```
+port
+| Komponen        | Port  | 
+| --------------- | ----- | 
+| StateStore      | 25010 | 
+| Catalog Service | 25020 |
+| Impala Daemon   | 25000 | 
+
 Catatan:
 
 * `LD_LIBRARY_PATH` diperlukan agar `libjvm.so` dapat ditemukan.
