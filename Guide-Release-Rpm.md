@@ -8,13 +8,13 @@ Jalankan daemon Impala dalam urutan berikut pada node yang sesuai:
 
 ```bash
 # Menjalankan StateStore (biasanya hanya pada satu node)
- /opt/impala/bin/impala.sh start statestored
+/usr/yava/3.1.0.0-0000/impala/bin/impala.sh start statestored
 
 # Menjalankan CatalogD (biasanya pada node yang sama dengan StateStore)
- /opt/impala/bin/impala.sh start catalogd
+/usr/yava/3.1.0.0-0000/impala/bin/impala.sh start catalogd
 
 # Menjalankan Impalad (pada semua node worker)
- /opt/impala/bin/impala.sh start impalad
+/usr/yava/3.1.0.0-0000/impala/bin/impala.sh start impalad
 ```
 
 Catatan:
@@ -32,7 +32,7 @@ Impala Shell merupakan skrip Bash, bukan skrip Python.
 Contoh koneksi:
 
 ```bash
-bash /opt/impala/shell/impala-shell -i localhost:21000
+bash /usr/yava/3.1.0.0-0000/impala/shell/impala-shell -i localhost:21000
 ```
 
 Catatan:
@@ -48,10 +48,10 @@ Impala memerlukan konfigurasi Hadoop dan Hive untuk dapat mengakses HDFS serta m
 Buat symbolic link dari konfigurasi yang sudah ada ke direktori konfigurasi Impala:
 
 ```bash
-ln -s /etc/hadoop/conf/core-site.xml /opt/impala/conf/core-site.xml
-ln -s /etc/hadoop/conf/hdfs-site.xml /opt/impala/conf/hdfs-site.xml
-ln -s /etc/hadoop/conf/yarn-site.xml /opt/impala/conf/yarn-site.xml
-ln -s /etc/hive/conf/hive-site.xml /opt/impala/conf/hive-site.xml
+ln -s /etc/hadoop/conf/core-site.xml /usr/yava/3.1.0.0-0000/impala/conf/core-site.xml
+ln -s /etc/hadoop/conf/hdfs-site.xml /usr/yava/3.1.0.0-0000/impala/conf/hdfs-site.xml
+ln -s /etc/hadoop/conf/yarn-site.xml /usr/yava/3.1.0.0-0000/impala/conf/yarn-site.xml
+ln -s /etc/hive/conf/hive-site.xml /usr/yava/3.1.0.0-0000/impala/conf/hive-site.xml
 ```
 
 Catatan:
@@ -63,14 +63,10 @@ Catatan:
 
 ## **4. Pengaturan `impala-env.sh`**
 
-Edit file `/opt/impala/conf/impala-env.sh` untuk menyesuaikan variabel lingkungan:
+Edit file `/usr/yava/3.1.0.0-0000/impala/conf/impala-env.sh` untuk menyesuaikan variabel lingkungan:
 
 ```bash
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0
-export HADOOP_HOME=/opt/hadoop
-export HADOOP_CONF_DIR=/etc/hadoop/conf
-export HIVE_CONF_DIR=/etc/hive/conf
-export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/amd64/server:$LD_LIBRARY_PATH
+next repo
 ```
 
 
@@ -78,7 +74,7 @@ export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/amd64/server:$LD_LIBRARY_PATH
 ## **5. Testing ***
 Impala shell
  ```
-bash /opt/impala/shell/impala-shell --protocol=beeswax -i localhost:21000
+bash /usr/yava/3.1.0.0-0000/impala/shell/impala-shell --protocol=beeswax -i localhost:21000
 ```
 port
 | Komponen        | Port  | 
