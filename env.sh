@@ -1,7 +1,7 @@
 #!/bin/bash
 # Impala environment configuration
 # Lokasi instalasi Impala
-export IMPALA_HOME=/opt/impala
+export IMPALA_HOME=/usr/yava/3.1.0.0-0000/impala
 export IMPALA_BIN_DIR=$IMPALA_HOME/bin
 export JAVA_BIN=$JAVA_HOME/bin/java
 export JAVA_HOME=/usr/lib/jvm/java-1.8.0
@@ -11,7 +11,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$JAVA_HOME/jre/lib/amd64/server:$LD_LIBRARY_PATH:/usr/yava/current/hadoop/lib/native
 
 # Set IMPALA_HOME to avoid dirname error
-export IMPALA_HOME=/opt/impala
+export IMPALA_HOME=/usr/yava/3.1.0.0-0000/impala
 
 # Avoid unbound CLASSPATH error
 export CLASSPATH=${CLASSPATH:-""}
